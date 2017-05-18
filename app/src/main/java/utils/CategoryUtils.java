@@ -1,0 +1,93 @@
+package utils;
+
+import android.content.ContentValues;
+import android.content.Context;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import dbHelpers.CategorySQLiteHelper;
+import models.Category;
+
+/**
+ * Created by Sabrina on 17/05/2017.
+ */
+
+public class CategoryUtils {
+  private CategorySQLiteHelper categoryHelper;
+  private SQLiteDatabase db;
+
+  public void initDb(Context context){
+    categoryHelper = new CategorySQLiteHelper(context, "dbDavinci1", null, 1);
+    db = categoryHelper.getWritableDatabase();
+
+    categoryHelper.clearTable(db);
+
+    //clearTable();
+
+
+    Category greenGrossery = new Category();
+    greenGrossery.setId(5);
+    greenGrossery.setName("verduleria");
+    greenGrossery.setDescription("todo verde");
+
+    Category butchery = new Category();
+    butchery.setId(6);
+    butchery.setName("carniceria");
+    butchery.setDescription("calne");
+
+    Category backery = new Category();
+    backery.setId(7);
+    backery.setName("panaderia");
+    backery.setDescription("pancitos");
+
+    create(greenGrossery);
+    create(butchery);
+    create(backery);
+
+  }
+
+  public void create(Category category){
+    if(db != null){
+      ContentValues newRegistry = new ContentValues();
+      newRegistry.put("id", category.getId());
+      newRegistry.put("name", category.getName());
+      newRegistry.put("description", category.getDescription());
+
+      db.insert("Category", null, newRegistry);
+    }
+  }
+
+  public List<Category> getAll(){
+    Cursor cursor = db.rawQuery("SELECT * FROM Category", null);
+    List<Category> categories = new ArrayList<>();
+
+    if (cursor.moveToFirst()) {
+      while(cursor.isAfterLast()== false){
+
+        Integer id = cursor.getInt(cursor.getColumnIndex("id"));
+        String name = cursor.getString(cursor.getColumnIndex("name"));
+        String description = cursor.getString(cursor.getColumnIndex("description"));
+
+        Category category = new Category();
+        category.setId(id);
+        category.setName(name);
+        category.setDescription(description);
+
+        categories.add(category);
+        cursor.moveToNext();
+      }
+    }
+    return categories;
+  }
+
+
+
+  public void destroyDb(){
+    db.close();
+  }
+
+
+}

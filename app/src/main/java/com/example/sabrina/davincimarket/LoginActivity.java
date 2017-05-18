@@ -17,8 +17,8 @@ public class LoginActivity extends AppCompatActivity{
     public Button ingresar;
     public EditText email;
     public EditText pass;
-    public String miEmail = "s";
-    public String miPass = "1";
+    public String miEmail = "sabri";
+    public String miPass = "123";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -16,7 +16,6 @@ public class CarroActivity extends AppCompatActivity{
 
   Bundle bun;
 
-  List<Product> productosSelec = new ArrayList<>();
 
   @Override
   public void onCreate(Bundle savedInstanceState) {
