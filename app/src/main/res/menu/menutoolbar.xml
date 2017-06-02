@@ -1,25 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <item
-        android:id="@+id/boton1"
-        android:icon="@mipmap/ic_launcher"
-        android:title="Hola"
-        android:visible="true"
-        app:showAsAction="always"
-    />
-    <item
-        android:id="@+id/boton2"
-        android:icon="@mipmap/ic_launcher"
-        android:title="Hola"
-        android:visible="true"
-        app:showAsAction="always"
+        android:id="@+id/lista"
+        android:title="@string/Lista"
+        app:showAsAction="never"
         />
     <item
-        android:id="@+id/boton3"
-        android:icon="@mipmap/ic_launcher"
-        android:title="Hola"
-        android:visible="true"
-        app:showAsAction="ifRoom"
+        android:id="@+id/settings"
+        android:title="@string/Settings"
+        app:showAsAction="never"
         />
+    <item
+        android:id="@+id/aboutme"
+        android:title="@string/Aboutme"
+        app:showAsAction="never"
+        />
+
 </menu>

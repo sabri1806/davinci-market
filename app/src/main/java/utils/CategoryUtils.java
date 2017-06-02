@@ -25,9 +25,6 @@ public class CategoryUtils {
 
     categoryHelper.clearTable(db);
 
-    //clearTable();
-
-
     Category greenGrossery = new Category();
     greenGrossery.setId(5);
     greenGrossery.setName("verduleria");
@@ -43,9 +40,29 @@ public class CategoryUtils {
     backery.setName("panaderia");
     backery.setDescription("pancitos");
 
+    Category cleaning = new Category();
+    cleaning.setId(8);
+    cleaning.setName("limpieza");
+    cleaning.setDescription("articulos");
+
+    Category dairyProducts = new Category();
+    dairyProducts.setId(9);
+    dairyProducts.setName("lacteos");
+    dairyProducts.setDescription("muuu");
+
+    Category drinks = new Category();
+    drinks.setId(10);
+    drinks.setName("bebidas");
+    drinks.setDescription("todo coca");
+
+
     create(greenGrossery);
     create(butchery);
     create(backery);
+    create(cleaning);
+    create(dairyProducts);
+    create(drinks);
+
 
   }
 
@@ -82,7 +99,6 @@ public class CategoryUtils {
     }
     return categories;
   }
-
 
 
   public void destroyDb(){

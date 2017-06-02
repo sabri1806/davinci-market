@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="pref_syncConnectionTypes_entries">DavinciMarket</array>
+    <array name="pref_syncConnectionTypes_values">DavinciMarket</array>
+
+</resources>

@@ -1,4 +1,14 @@
 <resources>
     <string name="app_name">DavinciMarket</string>
+    <string name="Lista">Lista</string>
+    <string name="Settings">Settings</string>
+    <string name="Aboutme">About me</string>
+
+    <string name="pref_sync">Preferencias</string>
+    <string name="pref_sync_summ">Conservar las por defecto</string>
+    <string name="pref_title_sms_delete">Tipo de conexion</string>
+    <string name="pref_title_mms_delete">Tipo de conexion</string>
+    <string name="pref_syncConnectionTypes_default">Tipo de conexion default</string>
+
 
 </resources>

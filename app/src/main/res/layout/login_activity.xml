@@ -13,9 +13,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="44dp"
-        android:hint="Usuario"
+        android:hint="User"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignStart="@+id/Password"
+        android:layout_alignEnd="@+id/Password"/>
 
     <EditText
         android:id="@+id/Password"

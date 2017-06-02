@@ -6,16 +6,14 @@
                 android:layout_height="match_parent"
                 android:orientation="vertical">
 
-
-    <Button
-        android:id="@+id/volver"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/listo"
-        android:layout_alignBottom="@+id/listo"
-        android:layout_marginEnd="56dp"
-        android:layout_toStartOf="@+id/listo"
-        android:text="Volver"/>
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/my_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"/>
 
     <Button
         android:id="@+id/listo"
@@ -24,6 +22,7 @@
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
         android:layout_marginBottom="15dp"
-        android:layout_marginEnd="71dp"
+        android:layout_marginEnd="70dp"
+        android:elevation="12dp"
         android:text="LISTO"/>
 </RelativeLayout>
